@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Hình ảnh ca sĩ -->
+    <ImageView
+        android:id="@+id/singerImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop" />
+
+    <!-- Nội dung văn bản -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp">
+
+        <!-- Tên ca sĩ -->
+        <TextView
+            android:id="@+id/singerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singer Name"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+        <!-- Dòng chữ 'Nghệ sĩ' -->
+        <TextView
+            android:id="@+id/singerRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nghệ sĩ"
+            android:textSize="16sp"
+            android:textColor="@color/textlyric" />
+
+    </LinearLayout>
+</LinearLayout>

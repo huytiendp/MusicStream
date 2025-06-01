@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/blueDark"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|top"
+            android:background="@drawable/baseline_keyboard_arrow_left_24"
+            android:id="@+id/exit_button"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All SONGS"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:id="@+id/name_text_view"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:id="@+id/option_btn"
+            android:layout_alignParentEnd="true"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <!-- RecyclerView to display the list of songs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_songs_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:layout_marginTop="70dp"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/rounded_corners"
+        android:id="@+id/player_view"
+        android:orientation="horizontal"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/song_cover_image_view"/>
+
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_title_text_view"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/song_cover_image_view"
+            android:layout_centerVertical="true"
+            android:paddingEnd="16dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="193dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01" />
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/prev"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/pauseButton"
+            android:src="@drawable/pause"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/nextButton"
+            android:src="@drawable/next"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+    </LinearLayout>
+    <!-- Menu -->
+    <include
+        android:id="@+id/menu"
+        layout="@layout/menu_layout"/>
+
+</RelativeLayout>

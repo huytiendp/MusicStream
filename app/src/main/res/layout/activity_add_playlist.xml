@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <!-- Custom Header Layout -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <View
+            android:id="@+id/exit_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|top"
+            android:background="@drawable/baseline_keyboard_arrow_left_24"/>
+
+        <TextView
+            android:id="@+id/name_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Create New Playlist"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/option_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:layout_alignParentEnd="true"/>
+
+    </LinearLayout>
+
+    <!-- Input for playlist name -->
+    <EditText
+        android:id="@+id/playlistNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Playlist Name"
+        android:textColor="@color/white"
+        android:textColorHint="@color/textlyric"
+        android:inputType="textPersonName"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Input for playlist description -->
+    <EditText
+        android:id="@+id/playlistDescriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/textlyric"
+        android:hint="Playlist Description"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button to create playlist -->
+    <Button
+        android:id="@+id/createPlaylistButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink"
+        android:text="Create Playlist"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

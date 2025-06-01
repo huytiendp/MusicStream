@@ -1,0 +1,159 @@
+<!-- activity_search.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark"
+    android:padding="16dp"
+    tools:context=".SearchActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo_music_stream"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:id="@+id/option_btn"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corner"
+        android:layout_marginTop="16dp"
+        android:padding="15dp"
+        android:id="@+id/search_bar"
+        android:layout_below="@id/toolbar">
+
+        <!-- Icon Search bên trái -->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/search_2"/>
+
+        <!-- Ô tìm kiếm -->
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Bạn muốn nghe gì ?"
+            android:id="@+id/search_input"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:paddingStart="8dp"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:inputType="text"
+            android:focusableInTouchMode="true"/>
+
+        <!-- Icon Camera bên phải -->
+        <ImageView
+            android:id="@+id/camera_input"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+
+    <!-- Search Results -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_results_recycler_view"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/rounded_corners"
+        android:id="@+id/player_view"
+        android:orientation="horizontal"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/song_cover_image_view"/>
+
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_title_text_view"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/song_cover_image_view"
+            android:layout_centerVertical="true"
+            android:paddingEnd="16dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="193dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01" />
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/prev"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/pauseButton"
+            android:src="@drawable/pause"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/nextButton"
+            android:src="@drawable/next"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+    </LinearLayout>
+    <!-- Menu -->
+    <include
+        android:id="@+id/menu"
+        layout="@layout/menu_layout"/>
+
+</RelativeLayout>

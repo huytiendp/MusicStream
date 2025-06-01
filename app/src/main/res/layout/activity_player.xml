@@ -1,0 +1,344 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".PlayerActivity">
+
+    <!-- Bọc bằng NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- Nội dung layout gốc -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp">
+
+            <!-- Sử dụng LinearLayout ngang để căn thẳng hàng -->
+
+
+            <FrameLayout
+                android:layout_width="370dp"
+                android:layout_height="370dp"
+                android:padding="5dp"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center_horizontal">
+
+                <!-- Ảnh nền với hiệu ứng mờ -->
+                <ImageView
+                    android:id="@+id/background_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+                <View
+                    android:id="@+id/blur_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blur_overlay"
+                    android:clickable="false" />
+
+                <!-- Hình ảnh chính -->
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="320dp"
+                    android:id="@+id/song_cover_image_view"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+            </FrameLayout>
+
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <!-- Player View -->
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:show_timeout="0"
+                    android:background="@android:color/transparent"
+                    app:hide_on_touch="false"
+                    app:surface_type="texture_view"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Song name"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/song_title_text_view"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="start" />
+                <!-- LinearLayout chứa cả tên ca sĩ và lượt nghe -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp">
+
+                    <!-- TextView hiển thị tên ca sĩ -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Singer"
+                        android:textColor="@color/white"
+                        android:id="@+id/song_singer_text_view"
+                        android:gravity="start" />
+
+                    <!-- Space để đẩy phần count và icon về phía bên phải -->
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <!-- LinearLayout chứa lượt nghe và icon headphone -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="15dp">
+
+                        <!-- TextView để hiển thị lượt nghe -->
+                        <TextView
+                            android:id="@+id/song_count_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:textColor="@color/text2"
+                            android:gravity="end"
+                            android:layout_marginRight="5dp" />
+
+                        <!-- Icon headphone -->
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/headphone"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!-- LinearLayout chứa icon heart và download -->
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_gravity="top"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/time"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/timer_icon" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/repeat"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/repeat_icon" />
+            </LinearLayout>
+
+            <!-- Phần tiêu đề Lyrics với icon down -->
+            <LinearLayout
+                android:id="@+id/lyric_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/rounded_corner_pink"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lyrics"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/down_lyric"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/down"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <!-- Phần lyric chuyển xuống đây, ban đầu ẩn -->
+            <TextView
+                android:id="@+id/song_lyric_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lyrics will be shown here"
+                android:textSize="19sp"
+                android:textColor="@color/white"
+                android:padding="25dp"
+                android:gravity="center_horizontal"
+                android:ellipsize="end"
+                android:scrollbars="vertical"
+                android:overScrollMode="always"
+                android:layout_marginTop="30dp"
+                android:lineSpacingExtra="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/rounded_corner_pink"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:layout_marginTop="20dp">
+
+                <!-- Sử dụng CardView để bo góc cho ảnh -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <!-- Ảnh bên trong CardView, tuân theo bo góc của CardView -->
+                    <ImageView
+                        android:id="@+id/singer_image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- TextView cho tên ca sĩ, đặt trên TextView chi tiết ca sĩ  -->
+                <TextView
+                    android:id="@+id/singer_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="Singer"
+                    android:textColor="@color/blueDark"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="start"
+                    android:background="@android:color/transparent" />
+
+                <!-- TextView chi tiết bài hát, nằm ở dưới cùng của ảnh và cách TextView trên 20dp -->
+                <TextView
+                    android:id="@+id/songDetailSingerTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:textSize="13sp"
+                    android:textColor="@color/textlyric"
+                    android:padding="10dp"
+                    android:background="#80000000"
+                    android:maxLines="3"
+                    android:ellipsize="end" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/black"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/down"
+            android:id="@+id/exit_button"
+            android:layout_gravity="start" />
+
+        <!-- Space để căn giữa "Singer" -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Singer"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/song_subtitle_text_view"
+            android:gravity="center" />
+
+        <!-- Space để căn giữa với nút "More" -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/more"
+            android:id="@+id/more_button"
+            android:layout_gravity="end" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_menu"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/popup_background" />
+
+    <!-- Menu item 2 -->
+    <TextView
+        android:id="@+id/menu_item_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm vào yêu thích"
+        android:textSize="18sp"
+        android:textColor="@color/textwhite"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <!-- Menu item 3 -->
+    <TextView
+        android:id="@+id/menu_item_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chia sẽ bài hát"
+        android:textSize="18sp"
+        android:textColor="@color/textwhite"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/add_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm vào playlist"
+        android:textSize="18sp"
+        android:textColor="@color/textwhite"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/share_qr_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hiển thị mã Feeling"
+        android:textSize="18sp"
+        android:textColor="@color/textwhite"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/report_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Báo cáo"
+        android:textSize="18sp"
+        android:textColor="@color/textwhite"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground" />
+
+</LinearLayout>

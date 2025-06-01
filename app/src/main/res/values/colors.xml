@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blueDark">#121212</color>
+    <color name="textwhite">#CFCFD8</color>
+    <color name="red">#EF1313</color>
+    <color name="pink">#ee1e5a</color>
+    <color name="gray">#333232</color>
+    <color name="textlyric">#B5B5BA</color>
+    <color name="text2">#88888A</color>
+    <color name="blueDark2">#212121</color>
+    <color name="selected_item">#88888A</color>
+
+
+
+
+
+</resources>

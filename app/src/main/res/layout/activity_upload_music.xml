@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark">
+
+    <!-- Toolbar for Back Button -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:title="Upload Music"
+        android:titleTextColor="@android:color/white" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivSelectedImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập tên bài hát"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textlyric"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tên ca sĩ"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textlyric"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etLyrics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập lời bài hát"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textlyric"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etDetailSinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textlyric"
+                android:hint="Chi tiết về ca sĩ" />
+
+            <TextView
+                android:id="@+id/tvSelectedMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnSelectMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/pink"
+                android:text="Chọn file nhạc" />
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn hình ảnh nhạc"
+                android:backgroundTint="@color/pink"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnSelectArtistImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chọn hình ảnh ca sĩ"
+                android:backgroundTint="@color/pink"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tải lên"
+                android:backgroundTint="@color/pink"
+                android:layout_marginTop="16dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/etDocumentId"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="Nhập ID tài liệu"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textColorHint="@color/textlyric"-->
+    <!--            android:layout_marginBottom="16dp" />-->

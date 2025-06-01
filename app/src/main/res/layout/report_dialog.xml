@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn lý do báo cáo"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/report_reasons_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/reason_wrong_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sai thông tin bài hát" />
+
+        <RadioButton
+            android:id="@+id/reason_poor_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Âm thanh bài hát kém" />
+
+        <RadioButton
+            android:id="@+id/reason_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khác" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/other_reason_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập lý do khác"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/submit_report_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gửi báo cáo"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

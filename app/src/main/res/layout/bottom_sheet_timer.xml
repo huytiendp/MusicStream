@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_menu"
+    android:padding="16dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dừng âm thanh trong"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp" />
+
+    <!-- Các tùy chọn thời gian -->
+    <TextView
+        android:id="@+id/option_5_minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5 phút"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/option_10_minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="10 phút"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/option_20_minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20 phút"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/option_30_minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="30 phút"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/option_45_minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="45 phút"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/option_1_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 giờ"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground" />
+
+
+</LinearLayout>

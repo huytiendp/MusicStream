@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/feeling"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicStream"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".PlayerActivity"-->
+<!--            android:theme="@style/Theme.App.Translucent"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".SongsListActivity"
+            android:exported="false" />
+        <activity android:name=".SingerActivity">
+        </activity>
+        <activity android:name=".SearchActivity">
+        </activity>
+        <activity android:name=".ChangePasswordActivity">
+        </activity>
+        <activity android:name=".AllSongsActivity">
+        </activity>
+        <activity android:name=".UserAccountActivity">
+        </activity>
+        <activity android:name=".PlaylistActivity">
+        </activity>
+        <activity android:name=".AddPlaylistActivity">
+        </activity>
+        <activity android:name=".SongPlaylistActivity">
+        </activity>
+        <activity android:name=".SelectSongsActivity">
+        </activity>
+        <activity android:name=".FavoriteActivity">
+        </activity>
+        <activity android:name=".TimeStatisticsActivity">
+        </activity>
+        <activity android:name=".ListeningHistoryActivity">
+        </activity>
+        <activity android:name=".QRScannerActivity">
+        </activity>
+        <activity android:name=".DetailSingerActivity">
+        </activity>
+
+
+
+
+
+        <activity android:name=".Admin.UploadMusicActivity" />
+        <activity android:name=".Admin.AdminActivity" />
+        <activity android:name=".Admin.CategoryAdminActivity" />
+        <activity android:name=".Admin.SongsAdminActivity" />
+        <activity android:name=".Admin.SongDetailAdminActivity" />
+        <activity android:name=".Admin.EditSongAdminActivity" />
+        <activity android:name=".Admin.CategoryDetailAdminActivity" />
+        <activity android:name=".Admin.EditCategoryAdminActivity" />
+        <activity android:name=".Admin.UploadCategoryActivity" />
+        <activity android:name=".Admin.SectionAdminActivity" />
+        <activity android:name=".Admin.SectionDetailAdminActivity" />
+        <activity android:name=".Admin.UserAdminActivity" />
+        <activity android:name=".Admin.ReportAdminActivity" />
+
+
+
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PlayerActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="feelingmusic.page.link" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+
+</manifest>

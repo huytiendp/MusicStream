@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar for Back Button -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <!-- Container with padding for all other elements -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"> <!-- Apply padding here -->
+
+            <ImageView
+                android:id="@+id/songCoverImageView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp" />
+
+            <!-- TextView for Song ID -->
+
+
+            <!-- Existing Title and Subtitle -->
+            <TextView
+                android:id="@+id/songTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/songSubtitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="4dp" />
+
+            <!-- TextView for Song URL -->
+            <TextView
+                android:id="@+id/songIdTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ID"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/songUrlTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="URL"
+                android:textSize="16sp"
+                android:textColor="@color/white" />
+
+            <!-- Other Fields for Singer, Lyrics, etc. -->
+            <TextView
+                android:id="@+id/songLyricsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:text="Lyrics will be displayed here..." />
+
+            <TextView
+                android:id="@+id/songSingerUrlTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:text="Singer URL" />
+
+            <TextView
+                android:id="@+id/songDetailSingerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:text="Details of Singer" />
+
+            <TextView
+                android:id="@+id/songCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:text="Lượt nghe" />
+
+            <Button
+                android:id="@+id/editSongButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sửa bài hát"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white"/>
+
+            <!-- Nút xóa bài hát -->
+            <Button
+                android:id="@+id/deleteSongButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Xóa bài hát"
+                android:backgroundTint="@color/pink"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout> <!-- End of padded LinearLayout -->
+
+    </LinearLayout>
+</ScrollView>

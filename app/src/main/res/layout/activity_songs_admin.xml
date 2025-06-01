@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark">
+
+    <!-- Toolbar with back button -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- New Search Layout with ImageView and EditText -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corner"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/search_2" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bạn muốn nghe gì?"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:paddingStart="8dp"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:inputType="text"
+            android:focusableInTouchMode="true" />
+    </LinearLayout>
+
+    <!-- Songs List RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songsAdminRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="8dp" />
+
+    <!-- Floating Action Button for adding new music -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addSongFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/pink"
+        android:contentDescription="Add Song" />
+
+</RelativeLayout>

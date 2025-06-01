@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_menu"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/popup_background" />
+
+    <LinearLayout
+        android:id="@+id/home_option"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/home_menu"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trang chủ"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/all_songs_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/disk_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/disc"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/all_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tất cả bài hát"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/download_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/download_menu"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/downloaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã tải về"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settings"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/settings_menu"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/playlist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/playlist_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/playlist"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playlist"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+    </LinearLayout>
+
+    <!-- Layout mới trong file XML (ví dụ: activity_main.xml hoặc layout của màn hình hiện tại) -->
+    <LinearLayout
+        android:id="@+id/singer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/singer_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/singer"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="singer"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+    </LinearLayout>
+
+    <!-- Layout mới trong file XML (ví dụ: activity_main.xml hoặc layout của màn hình hiện tại) -->
+    <LinearLayout
+        android:id="@+id/admin_song_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AdminSong"
+            android:textSize="18sp"
+            android:textColor="@color/textwhite" />
+    </LinearLayout>
+</LinearLayout>

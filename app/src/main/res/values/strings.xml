@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Feeling</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>LGBT</item>
+    </string-array>
+    <string name="password_hidden">Password : ********</string>
+</resources>
+
+

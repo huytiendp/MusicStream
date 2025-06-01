@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/toolbar">
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/feeling"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FEELING"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:id="@+id/option_btn"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_above="@+id/player_view"
+        android:layout_below="@id/toolbar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:fontFamily="sans-serif-medium"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/categories_recycler_view"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/section_1_main_layout">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/section_1_title"
+                    tools:text="Trending"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_arrow_right"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_1_title"
+                    android:id="@+id/section_1_recycler_view"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/singer_section_main_layout">
+
+                <!-- Tiêu đề cho Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/singer_section_title"
+                    android:text="Singers"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <!-- Biểu tượng mũi tên để di chuyển -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_arrow_right"/>
+
+                <!-- RecyclerView để hiển thị các ca sĩ -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/singer_section_title"
+                    android:id="@+id/singer_section_recycler_view"/>  <!-- Đảm bảo ID đúng -->
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/mostly_played_main_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mostly_played_title"
+                    tools:text="Trending"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_arrow_right"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mostly_played_title"
+                    android:id="@+id/mostly_played_recycler_view"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/section_2_main_layout">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/section_2_title"
+                    tools:text="Trending"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_arrow_right"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_2_title"
+                    android:id="@+id/section_2_recycler_view"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/section_3_main_layout">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/section_3_title"
+                    tools:text="Trending"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_arrow_right"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/section_3_title"
+                    android:id="@+id/section_3_recycler_view"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/rounded_corners"
+        android:id="@+id/player_view"
+        android:orientation="horizontal"
+        android:layout_marginBottom="70dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/song_cover_image_view"/>
+
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_title_text_view"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/song_cover_image_view"
+            android:layout_centerVertical="true"
+            android:paddingEnd="16dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <Space
+            android:layout_width="193dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01" />
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/prev"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/pauseButton"
+            android:src="@drawable/pause"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/nextButton"
+            android:src="@drawable/next"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menu"
+        layout="@layout/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1009045870650",
+    "project_id": "music-stream-6b740",
+    "storage_bucket": "music-stream-6b740.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009045870650:android:0c3cabd06b50e6fcf1bd03",
+        "android_client_info": {
+          "package_name": "com.example.musicstream"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-NyfmsZFi6zn6JkUnGhbO5bZsMOhGUVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

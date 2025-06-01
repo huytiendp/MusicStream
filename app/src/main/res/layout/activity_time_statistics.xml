@@ -1,0 +1,33 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tổng thời gian sử dụng -->
+    <TextView
+        android:id="@+id/totalTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời gian sử dụng tổng cộng: 0 giây"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Danh sách thống kê -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/statisticsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Nút Reset -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Thống Kê" />
+
+</LinearLayout>
